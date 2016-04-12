@@ -1,5 +1,5 @@
-var dbJsonBase = "http://de.dbpedia.org/data/";
-var dbJsonSuffix = ".json"; 
+var dbJsonBase = "http://de.dbpedia.org/resource/";
+var dbJsonSuffix = "?output=application/rdf+json"; 
 var dbJson = "";
 var subjectHeader; 
 var loadingLabel = "<span class='loading'> loading ... </span>";
@@ -69,12 +69,14 @@ function parseInput2DbJson(input){
 
 function readInputJson(){
 	storeSubjectName();
+	encoded = encodeURI(dbJson);
+	console.log(encoded);
 	jQuery.ajax({
 		beforeSend	: clearRdf(),
 		crossDomain	: true,
-		url		: dbJson,
 		method		: "GET",
-	        dataType	: "jsonp"
+		url		: encoded,
+		dataType : "json",
 	}).done(function(msg){
 		parseRdf(msg);
 	});
@@ -95,13 +97,12 @@ function clearRdf(){
  * */
 function parseRdf(json){
 	contentRdf.html("<h2>The contents are: </h2> ");
-
 	for(property in json){
 		console.log(property);
-		if(isSubject(property)){	
+		
 		contentRdf.append(createTripleDiv(property, json[property]));
 		}
-	}
+	
 }
 /**
  * returns true if the subject-identifier is equals to the 
