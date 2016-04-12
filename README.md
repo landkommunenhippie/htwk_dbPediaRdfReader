@@ -17,9 +17,9 @@ ExampleURLs that are formatted right:
 * http://de.dbpedia.org/data/Robert_Schuman?output=application/rdf+json
 * http://de.wikipedia.org/wiki/Robert_Schuman
 * http://de.dbpedia.org/data/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig.json
-** Not Working, probably because of dbPedia-Issues with umlauts -- empty json returned
+	* Not Working, probably because of dbPedia-Issues with umlauts -- empty json returned
 * http://de.wikipedia.org/wiki/Hochschule_für_Technik,_Wirtschaft_und_Kultur_Leipzig
-** Not Working, probably because of dbPedia-Issues with umlauts -- empty json returned
+	* Not Working, probably because of dbPedia-Issues with umlauts -- empty json returned
 * http://de.dbpedia.org/data/Leipzig.json
 * http://de.wikipedia.org/wiki/Leipzig
 
@@ -40,8 +40,8 @@ Turtle Implementation will be fine for instance.
 If you have a look at for example the Page of Burkhard Jung various dataformats are provided.
 
 * rdf
-** xml
-** ntriples
+	* xml
+	* ntriples
 	* turtle
 	* json
 	* ld+json
