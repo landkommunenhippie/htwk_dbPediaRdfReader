@@ -2,8 +2,8 @@ Description
 ===========
 ## This is a raw RDF-JSON analyzer.
 
-The Object is targeted to parse the json-formatted *RDF-Triples* of *db-pedia* in a readable form. 
-This means that u can paste the url of a json-formatted rdf-object of db-pedia at _http://dede.dbpedia.org/_ inside the input field and get all the triples of the pasted subject. 
+The Object is targeted to parse the json-formatted *RDF-Triples* of *db-pedia* and present them in a readable form. 
+This means that u can paste the url of a json-formatted rdf-object of db-pedia at _http://de.dbpedia.org/_ inside the input field and get all the triples of the pasted subject. 
 
 Uses just those triples with leading subjects.
 For example there are no links that point to the dbpedia-entity.
